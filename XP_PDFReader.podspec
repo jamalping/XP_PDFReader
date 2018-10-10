@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
 
   s.name         = 'XP_PDFReader'
-  s.version      = '0.1.0'
-  s.summary      = 'XP_PDFReader.'
+  s.version      = '0.1.1'
+  s.summary      = 'XP_PDFReader'
 
   s.description  = <<-DESC
                     this is XP_PDFReader
