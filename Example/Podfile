@@ -1,11 +1,28 @@
+platform :ios, '8.0'
 use_frameworks!
 
+#source 'git@git.silvrr.com:iOS/Specs.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
 target 'XP_PDFReader_Example' do
+
   pod 'XP_PDFReader', :path => '../'
 
-  target 'XP_PDFReader_Tests' do
-    inherit! :search_paths
+  # pod 'Base', :path => '../'
+  # pod 'Network', '~> 0.1.0'
 
-    
+  # target 'XP_PDFReader_Tests' do
+  #   inherit! :search_paths
+  #
+  #
+  # end
+
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '4.0'
+    end
   end
 end

@@ -1,42 +1,48 @@
-#
-# Be sure to run `pod lib lint XP_PDFReader.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
-  s.name             = 'XP_PDFReader'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of XP_PDFReader.'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.name         = 'XP_PDFReader'
+  s.version      = '0.1.0'
+  s.summary      = 'XP_PDFReader.'
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description  = <<-DESC
+                    this is XP_PDFReader
+                   DESC
 
-  s.homepage         = 'https://github.com/jamalping/XP_PDFReader'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'jamalping' => '420436097@qq.com' }
-  s.source           = { :git => 'https://github.com/jamalping/XP_PDFReader.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.homepage     = 'https://github.com/jamalping/XP_PDFReader'
 
-  s.ios.deployment_target = '8.0'
+  s.license      = { :type => 'MIT', :file => 'FILE_LICENSE' }
+
+  s.author       = 'jamalping'
+
+  s.platform     = :ios, '8.0'
+
+  #  When using multiple platforms
+  # s.ios.deployment_target = '5.0'
+  # s.osx.deployment_target = '10.7'
+  # s.watchos.deployment_target = '2.0'
+  # s.tvos.deployment_target = '9.0'
+
+  s.source       = { :git => 'git@github.com:jamalping/XP_PDFReader.git', :tag => s.version.to_s }
 
   s.source_files = 'XP_PDFReader/Classes/**/*'
-  
+
+  #- 推荐这种 -#
   # s.resource_bundles = {
-  #   'XP_PDFReader' => ['XP_PDFReader/Assets/*.png']
+  #   'XP_PDFReader' => ['XP_PDFReader/Assets/**/*']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  # s.resources  = 'XP_PDFReader/**/*.{storyboard,xib}', 'XP_PDFReader/Assets/*'
+  # s.resources = 'Resources/*.png'
+
+  # s.preserve_paths = 'FilesToSave', 'MoreFilesToSave'
+
+  # s.framework  = 'SomeFramework'
+  # s.frameworks = 'SomeFramework', 'AnotherFramework'
+
+  # s.library   = 'iconv'
+  # s.libraries = 'iconv', 'xml2'
+
+  # s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
+  # s.dependency 'AFNetworking'
+
 end
