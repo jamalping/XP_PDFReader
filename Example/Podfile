@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'XP_PDFReader_Example' do
+  pod 'XP_PDFReader', :path => '../'
+
+  target 'XP_PDFReader_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

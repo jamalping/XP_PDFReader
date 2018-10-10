@@ -1,0 +1,16 @@
+PODS:
+  - XP_PDFReader (0.1.0)
+
+DEPENDENCIES:
+  - XP_PDFReader (from `../`)
+
+EXTERNAL SOURCES:
+  XP_PDFReader:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  XP_PDFReader: c3bae35ee4c167bad6817977f93f1d7374b37c29
+
+PODFILE CHECKSUM: f0718f2da7aa753d1f9a996dbd88e1835e60ee20
+
+COCOAPODS: 1.5.3

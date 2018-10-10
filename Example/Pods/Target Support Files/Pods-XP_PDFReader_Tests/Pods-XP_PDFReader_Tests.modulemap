@@ -1,0 +1,6 @@
+framework module Pods_XP_PDFReader_Tests {
+  umbrella header "Pods-XP_PDFReader_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

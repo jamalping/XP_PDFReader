@@ -1,0 +1,6 @@
+framework module XP_PDFReader {
+  umbrella header "XP_PDFReader-umbrella.h"
+
+  export *
+  module * { export * }
+}
