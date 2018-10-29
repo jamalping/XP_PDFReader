@@ -56,4 +56,4 @@ git commit -am ${NewVersionNumber}
 git tag ${NewVersionNumber}
 git push origin master --tags
 #pod repo update Specs && pod repo push Specs XP_PDFReader.podspec --verbose --allow-warnings --sources='git@git.silvrr.com:iOS/Specs.git,https://github.com/CocoaPods/Specs'
-# cd ~/.cocoapods/repos/Specs && git pull origin master && cd - && pod repo push Specs XP_PDFReader.podspec --verbose --allow-warnings --use-libraries
+ cd ~/.cocoapods/repos/Specs && git pull origin master && cd - && pod repo push Specs XP_PDFReader.podspec --verbose --allow-warnings --use-libraries
