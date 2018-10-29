@@ -11,9 +11,7 @@ import UIKit
 
 class PDFReaderViewController: UIViewController {
     
-    
     let documentPath: String = {
-        
         guard var document =  NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last else {
             return ""
         }
@@ -22,6 +20,7 @@ class PDFReaderViewController: UIViewController {
     
     // 缓存地址
     lazy var cachePath: String = {
+        
         return self.documentPath + "/" + self.avaliableCachePath(self.url ?? "") + ".pdf"
     }()
     
@@ -31,15 +30,35 @@ class PDFReaderViewController: UIViewController {
         return web
     }()
     
-    /// PDF地址，本地路径或者下载URL
-    var url: String?
+    /// PDF数据源
+    var source: SourceType?
     
-    var loadIndicatorView: UIActivityIndicatorView = UIActivityIndicatorView.init(activityIndicatorStyle: .gray)
+    /// PDF地址，本地路径或者下载URL
+    var url: String? {
+        get {
+            guard let sc = source else { return nil }
+            switch sc {
+            case .local(url: let urlString):
+                return urlString
+            case .netWork(url: let urlString):
+                return urlString
+            }
+        }
+    }
+
+    
+    /// 加载中动画
+    var loadIndicatorView: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView.init(activityIndicatorStyle: .gray)
+        indicator.hidesWhenStopped = true
+        return indicator
+    }()
     
     let backItem = UIBarButtonItem.init(image: UIImage.init(named: "back"), style: .plain, target: self, action: #selector(backAction))
     
-    public init(url: String) {
-        self.url = url
+    public init(source: SourceType) {
+        self.source = source
+
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -57,23 +76,35 @@ class PDFReaderViewController: UIViewController {
         
         // 页面加载
         configPage()
-        if let url = self.url {
-            loadFile(urlString: url)
-        }
+
+        guard let sc = self.source else { return }
+        loadFile(source: sc)
     }
     
     /// 加载PDF,支持本地地址和下载地址
-    func loadFile(urlString: String) {
-        if FileManager.default.fileExists(atPath: self.cachePath) {
-            self.loadUrlPath(path: self.cachePath)
-            return
+    func loadFile(source: SourceType) {
+        switch source {
+        case .local(url: let urlString):
+            loadLoacalPDF(url: urlString)
+        case .netWork(url: let urlString):
+            if FileManager.default.fileExists(atPath: self.cachePath) {
+                self.loadUrlPath(path: self.cachePath)
+                return
+            }
+            self.downLoadFile(urlString: urlString)
         }
-        self.downLoadFile(urlString: self.url!)
-
+    }
+    
+    /// 加载本地PDF文件
+    ///
+    /// - Parameter url: 本地路径
+    func loadLoacalPDF(url: String) {
+        self.loadUrlPath(path: url)
     }
     
     /// 下载PDF文件，只支持下载地址
     func downLoadFile(urlString: String) {
+        loadIndicatorView.startAnimating()
         NetWorkManage.shareInstance.downLoad(urlString: urlString) { (url, response, error) in
             guard error == nil else {
                 return
@@ -84,6 +115,8 @@ class PDFReaderViewController: UIViewController {
             let resulrPath = self.cachePath
 
             try? FileManager.default.copyItem(atPath: tempPath, toPath: resulrPath)
+            
+            self.loadIndicatorView.startAnimating()
             
             self.loadUrlPath(path: self.cachePath)
         }
@@ -118,6 +151,7 @@ class PDFReaderViewController: UIViewController {
         self.view.addSubview(loadIndicatorView)
     }
     
+    /// 返回上个页面
     @objc func backAction() {
         if ((self.navigationController?.presentingViewController) != nil) && (self.navigationController?.viewControllers.count)! <= 1 {
             self.dismiss(animated: true, completion: nil)

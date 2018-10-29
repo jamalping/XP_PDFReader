@@ -17,6 +17,16 @@ public enum OpenType{
     case present(UIViewController)
 }
 
+
+/// PDF文件数据源类型
+///
+/// - local: 本地
+/// - netWork: 网络
+public enum SourceType {
+    case local(url: String)
+    case netWork(url: String)
+}
+
 /// PDF阅读器管理工具类，支持盖章的pdf展示
 public class PDFReaderManage {
     
@@ -27,9 +37,9 @@ public class PDFReaderManage {
     /// 打开pdf,支持本地地址以及下载地址
     ///
     /// - Parameter path: 本地地址或者下载地址
-    public func openURL(_ path: String, openType: OpenType) {
+    public func openURL(_ source: SourceType, openType: OpenType) {
         
-        let pdfVC = PDFReaderViewController.init(url: path)
+        let pdfVC = PDFReaderViewController.init(source: source)
         
         switch openType {
         case .push(let navigationController):

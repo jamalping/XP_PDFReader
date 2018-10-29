@@ -5,6 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/XP_PDFReader.svg?style=flat)](https://cocoapods.org/pods/XP_PDFReader)
 [![Platform](https://img.shields.io/cocoapods/p/XP_PDFReader.svg?style=flat)](https://cocoapods.org/pods/XP_PDFReader)
 
+## 示例
+![示例.gif](https://upload-images.jianshu.io/upload_images/6165105-a634ae268b36b568.gif?imageMogr2/auto-orient/strip)
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -18,6 +21,23 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'XP_PDFReader'
+```
+
+## use
+
+```
+/// 加载网络PDF
+let url = "http://www.gov.cn/zhengce/pdfFile/2018_PDF.pdf"
+
+PDFReaderManage.shareInstance.openURL(.netWork(url: url), openType: .present(self))
+```
+
+```
+/// 加载本地PDF文件
+guard let localAdress = Bundle.main.path(forResource: "s3PreviewPDFdoid311538", ofType: "pdf") else {
+	return
+}
+PDFReaderManage.shareInstance.openURL(.local(url: localAdress), openType: .present(self))
 ```
 
 ## Author

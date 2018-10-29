@@ -15,6 +15,7 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		866C9BE759985EC0038F872D /* Pods_XP_PDFReader_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D27ABB6B0240C7F669B36CD /* Pods_XP_PDFReader_Example.framework */; };
 		EAED8AF5FC121A85D280061F /* Pods_XP_PDFReader_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4936D236DAD165D5F2F564E1 /* Pods_XP_PDFReader_Tests.framework */; };
+		FBED817C2186FE1500184EA3 /* s3PreviewPDFdoid311538.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FBED817B2186FE1500184EA3 /* s3PreviewPDFdoid311538.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +32,7 @@
 		0909BDC81139DE574747B100 /* Pods-XP_PDFReader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XP_PDFReader_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XP_PDFReader_Example/Pods-XP_PDFReader_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		340FCCC6DAD9D422C275E711 /* Pods-XP_PDFReader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XP_PDFReader_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XP_PDFReader_Tests/Pods-XP_PDFReader_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3E4DE99FCD7F875342858B37 /* Pods-XP_PDFReader_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XP_PDFReader_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-XP_PDFReader_Example/Pods-XP_PDFReader_Example.release.xcconfig"; sourceTree = "<group>"; };
-		46C390D5CD8C13CC584D032D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		46C390D5CD8C13CC584D032D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		4936D236DAD165D5F2F564E1 /* Pods_XP_PDFReader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XP_PDFReader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* XP_PDFReader_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XP_PDFReader_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,9 +45,10 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6D27ABB6B0240C7F669B36CD /* Pods_XP_PDFReader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XP_PDFReader_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		72601C29E54AA89522296D7F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		B75ECDC37FA70DD5CE28E8B9 /* XP_PDFReader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = XP_PDFReader.podspec; path = ../XP_PDFReader.podspec; sourceTree = "<group>"; };
+		72601C29E54AA89522296D7F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B75ECDC37FA70DD5CE28E8B9 /* XP_PDFReader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = XP_PDFReader.podspec; path = ../XP_PDFReader.podspec; sourceTree = "<group>"; };
 		CD22B9578505EBB642AED1D0 /* Pods-XP_PDFReader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XP_PDFReader_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XP_PDFReader_Tests/Pods-XP_PDFReader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		FBED817B2186FE1500184EA3 /* s3PreviewPDFdoid311538.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = s3PreviewPDFdoid311538.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				FBED817B2186FE1500184EA3 /* s3PreviewPDFdoid311538.pdf */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for XP_PDFReader */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				FBED817C2186FE1500184EA3 /* s3PreviewPDFdoid311538.pdf in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
