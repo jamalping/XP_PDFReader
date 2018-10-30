@@ -5,8 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/XP_PDFReader.svg?style=flat)](https://cocoapods.org/pods/XP_PDFReader)
 [![Platform](https://img.shields.io/cocoapods/p/XP_PDFReader.svg?style=flat)](https://cocoapods.org/pods/XP_PDFReader)
 
-## 示例
-![示例.gif](https://upload-images.jianshu.io/upload_images/6165105-a634ae268b36b568.gif?imageMogr2/auto-orient/strip)
+## 演示
+![演示.gif](https://upload-images.jianshu.io/upload_images/6165105-a634ae268b36b568.gif?imageMogr2/auto-orient/strip)
 
 ## Example
 
