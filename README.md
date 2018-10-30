@@ -44,6 +44,9 @@ PDFReaderManage.shareInstance.openURL(.local(url: localAdress), openType: .prese
 
 jamalping, 420436097@qq.com
 
+## blog
+[https://www.jianshu.com/p/b05da7357261](https://www.jianshu.com/p/b05da7357261)
+
 ## License
 
 XP_PDFReader is available under the MIT license. See the LICENSE file for more info.
